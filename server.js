@@ -3,7 +3,8 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const morgan = require('morgan');
 const helmet = require('helmet');
-
+const dotenv = require('dotenv');
+dotenv.config();
 
 // create express appnpm
 const app = express();
@@ -35,7 +36,7 @@ app.get("/", (req, res) => {
 
 
 // server listen for requests
-var port = process.env.PORT || 3000;
+var port = process.env.PORT;
 app.listen(port, () => {
-    console.log("Server is listening on port " + port);
+    console.log(`Server is listening on port ${port}`);
 });

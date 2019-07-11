@@ -1,6 +1,8 @@
 
 const mongoose = require("mongoose");
-const dbUrl = 'mongodb+srv://hoola:123hoola123@cluster0-umhal.mongodb.net/test?retryWrites=true&w=majority'
+const dotenv = require('dotenv');
+dotenv.config();
+const dbUrl = `${process.env.DB_URL}`
 mongoose.Promise = global.Promise;
 
 mongoose.set("useCreateIndex", true);

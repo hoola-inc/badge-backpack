@@ -26,7 +26,7 @@ app.use(helmet());
 // Configuring the database
 require("./src/config/db.config");
 // import all routes at once
-// require("./src/utilities/routes.utility")(app);
+require("./src/utilities/routes.utility")(app);
 
 
 // define a default route
